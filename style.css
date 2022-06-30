@@ -22,12 +22,13 @@ body{
 }
 
 .grid{
-    display: flex;
-    gap: 40px;
-    margin: auto;
-    align-items: center;
+  width: 70%;
+  display: flex;
+  gap: 40px;
+  margin: auto;
+  align-items: center;
   justify-content: center;
-  
+
 }
 
 .left, .right{
@@ -35,7 +36,7 @@ body{
 }
 .left{
     color: #fff;
-    flex-basis: 50%;
+    flex: 50%;
     flex-wrap: wrap;
   
 }
@@ -52,25 +53,26 @@ body{
     margin-top: 2opx;
   padding-top: 20px;
 }
-.login-container{
-    flex-wrap: wrap;
-    flex-basis: 50%;
-}
 
 
 .right{
   display: flex;
   flex-direction: row;
-  max-width: 450px;
+  flex: 50%;
 
 }
+
+.login-container{
+  flex-wrap: wrap;
+}
+
 .wrap{
     border-radius: 10px;
     background-color: #fff;
     align-items: center;
     display: flex;
     flex-direction: row;
-    padding: 15px 40px;
+    padding: 15px 20px;
     align-content: center;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
 }
@@ -132,20 +134,21 @@ body{
 }
 
 /*---- Responsiveness ---*/
-@media(max-width:768px) {
+
+@media screen and (max-width:600px) {
   body {
     background-image: url("images/bg-intro-mobile.png");
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
+    height: 100vh;
+    
   }
   .grid{
     flex-direction: column;
-    margin: 0 20px;
   }
   .right{
-    flex-direction: column;
-    margin: 0 20px;
+    flex: 100%;
+  }
+  .left{
+    flex: 80%;
   }
 }
